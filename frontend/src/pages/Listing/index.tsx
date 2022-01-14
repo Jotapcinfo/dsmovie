@@ -26,8 +26,6 @@ function Listing() {
             .then(response => {
                 const data = response.data as MoviePage;
                 setPage(data);
-
-
             });
     }, [pageNumber]);
 
@@ -38,7 +36,7 @@ function Listing() {
             <div className="container">
                 <div className="row">
                     {page.content.map(movie => (
-                        <div  key={movie.id}className="col-sm-6 col-lg-4 col-xl-3 mb-3">
+                        <div key={movie.id} className="col-sm-6 col-lg-4 col-xl-3 mb-3">
                             <MovieCard movie={movie} />
                         </div>
                     )
